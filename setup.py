@@ -11,7 +11,7 @@ requires = []
 setup(
     name='mdx_sections',
     version='0.1',
-    description='mdx_sections',
+    description="Python-Markdown extension to add a small amount of structure to Markdown documents.",
     long_description="{readme}\n\n{changes}".format(readme=readme, changes=changes),
     classifiers=[
         "Programming Language :: Python",
