@@ -78,7 +78,7 @@ class DocumentSectionProcessor(Treeprocessor):
                 node.remove(n)
 
                 if 'id' in n.attrib:
-                    section.attrib['id'] = 'section_' + n.attrib['id']
+                    section.attrib['id'] = n.attrib['id']
                     del n.attrib['id']
 
                 n.attrib['class'] = self.heading_cls
