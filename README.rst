@@ -10,13 +10,13 @@ This module is an extension to `Python-Markdown <https://github.com/waylan/Pytho
 There are two premises underlying the operation of this extension:
 
 - Each heading element indicates the start of a new document section.
-- Document sections can be nested, and the parent of a document section is the section created by the first preceding heading element with a higher order *e.g.* an ``h2`` section is contained by the heading block appearing prior to it which corresponds to an ``h1``. If there is no such element, then it is a child of the root element.
+- Document sections can be nested; the parent of a given section at a given heading depth (h1, h2 ... h6) is given by scanning the document from the start of this section toward the beginning of the document, stopping when the first heading element of higher depth (smaller number) is encountered -- the parent of this section is the section created by the higher depth heading, *e.g.* an ``h2`` section is contained by the heading block appearing prior to it which is at depth ``h1``. If there is no such element, then it is a child of the root element.
 
-The new section (a containing ``div`` element) can be configured to have an specific ``id`` and ``class`` attribute. The syntax is::
+The new section (a containing ``div`` element) can be configured to have a specific ``id`` and ``class`` attribute. The syntax is::
 
   # {id,class} Title
 
-Both ``id`` and ``class`` are optional, the contaaining ``div`` element will always be created as long as this extension is enabled.
+Both ``id`` and ``class`` are optional, the containing ``div`` element will always be created as long as this extension is enabled.
 
 One example should make this clear. Suppose the following input document is provided::
   
