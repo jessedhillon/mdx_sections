@@ -8,8 +8,8 @@ from markdown.blockprocessors import BlockProcessor
 
 Logger = logging.getLogger('mdx_sections')
 
-def makeExtension(config=None):
-    return DocumentSectionExtension(config)
+def makeExtension(*args, **kwargs):
+    return DocumentSectionExtension(*args, **kwargs)
 
 class DocumentSectionExtension(Extension):
     def extendMarkdown(self, md, md_globals):
