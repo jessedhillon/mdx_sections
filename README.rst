@@ -19,7 +19,7 @@ The new section (a containing ``div`` element) can be configured to have a speci
 Both ``id`` and ``class`` are optional, the containing ``div`` element will always be created as long as this extension is enabled.
 
 One example should make this clear. Suppose the following input document is provided::
-  
+
     # {resume} Resum&eacute;
     
     ## {education} Education
