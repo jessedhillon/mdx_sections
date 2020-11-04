@@ -79,6 +79,9 @@ class HeadingProcessor(BlockProcessor):
             heading_id = heading_id[0]
             cls = "section"
 
+        anchor_tag = SubElement(parent, "div")
+        anchor_tag.attrib["id"] = heading_id
+        anchor_tag.attrib["class"] = "title-anchor"
         h_tag = SubElement(parent, "h{depth}".format(depth=depth))
         h_tag.attrib["id"] = heading_id
         h_tag.attrib["class"] = cls
