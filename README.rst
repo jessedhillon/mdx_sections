@@ -87,7 +87,7 @@ Install using setuptools, e.g. (within a virtualenv)::
 
 Or if you prefer to get the latest from Github::
 
-    $ git clone git://github.com/jessedhillon/mdx_sections.git
+    $ git clone https://github.com/jessedhillon/mdx_sections.git
 
 Usage
 =====
